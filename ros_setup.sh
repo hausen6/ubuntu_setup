@@ -60,4 +60,4 @@ source ~/.bashrc
 source /opt/ros/$distro/setup.bash
 
 # Getting ros-y install
-sudo apt-get -y install  python-ros
+sudo apt-get -y install  python-rosinstall
