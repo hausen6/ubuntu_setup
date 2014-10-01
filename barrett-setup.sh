@@ -20,15 +20,18 @@ tar zxvf peak-linux-driver-7.12.tar.gz
 cd peak-linux-driver-7.12
 make NET=NO_NETDEV_SUPPORT
 sudo make install
+rm peak-linux-driver-7.12.tar.gz
+rm -rv peak-linux-driver-7.12
 # swig install
 sudo apt-get -y install swig
 
 # Python wrapper for the Peak-CAN driver
 cd ~/ROS
 git clone https://github.com/RobotnikAutomation/pcan_python.git ~/ROS/pcan_python
-cd ~/ROS/pcan_python
 # Makefile を修正
-cat ./pcan-python-makefile > ~/ROS/pcan_python/Makefile
+makefile=`find -name pcan-python-makefile`
+cat $makefile > ~/ROS/pcan_python/Makefile
+cd ~/ROS/pcan_python
 make
 sudo make install
 python setup.py build
