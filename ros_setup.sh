@@ -7,7 +7,7 @@ echo "\t3: indigo"
 read -p "" version
 case $version in
 	1)
-		distro='indigo';;
+		distro='groovy';;
 	2)
 		distro='hydro';;
 	3)
