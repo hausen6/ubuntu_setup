@@ -3,11 +3,11 @@
 
 # makeに必要なツール群
 sudo apt-get build-dep vim
-sudo apt-get install luajit libluajit-5.1
+sudo apt-get install -y luajit libluajit-5.1
 
 # vim ソースコード取得
 cd ~/Downloads
-sudo apt-get install mercurial
+sudo apt-get install -y mercurial
 hg clone https://vim.googlecode.com/hg/ vim
 
 # make
