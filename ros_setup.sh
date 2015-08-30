@@ -48,13 +48,13 @@ fi
 # sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-get update
 sudo apt-get -y install ros-$distro-desktop-full
-apt-cache search ros-$distro
 
 # initialize rosdep
 sudo rosdep init
 rosdep update
 
 # Environment setup
+echo "# for ROS setting" >> ~/.bashrc
 echo "source /opt/ros/$distro/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 source /opt/ros/$distro/setup.bash
