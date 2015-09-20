@@ -18,9 +18,9 @@ add_bashrc()
 add_bashrc 'if [[ !-x $PYENV_ROOT ]]; then'
 add_bashrc "    export PYENV_ROOT=$PYENV_ROOT"
 add_bashrc '    export PATH=$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH'
-add_bashrc '    eval "$(pyenv init -)"'
-add_bashrc '    eval "$(pyenv-virtualenv init -)"'
 add_bashrc "fi"
+add_bashrc 'eval "$(pyenv init -)"'
+add_bashrc 'eval "$(pyenv virtualenv-init -)"'
 
 # sudo時にもpathを引き継ぐように
 echo "以下の記述をvisudo時に加えてください."
